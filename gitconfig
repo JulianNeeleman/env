@@ -1,3 +1,10 @@
 [user]
 	email = julianneeleman@hotmail.com
 	name = JulianNeeleman
+[push]
+	default = simple
+[alias]
+	co = checkout
+	st = status
+	ci = commit
+	br = branch
