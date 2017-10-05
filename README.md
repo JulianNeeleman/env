@@ -15,6 +15,6 @@
     git submodule init
     git submodule update
 
-4. Change default shell
+4. Change default shell (requires reboot)
 
     chsh -s /bin/zsh
