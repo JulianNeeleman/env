@@ -1,5 +1,7 @@
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 
+source ~/.env/vim/bundle/pathogen/autoload/pathogen.vim
+
 execute pathogen#infect()
 
 filetype plugin indent on
