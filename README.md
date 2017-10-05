@@ -1,13 +1,15 @@
 Installation:
 
-    git clone git://github.com/julianneeleman/vim-env.git ~/.vim
+    git clone git://github.com/julianneeleman/env.git ~/.env
 
 Create symlinks:
 
-    ln -s ~/.vim/vimrc ~/.vimrc
+    ln -s ~/.env/vim/vimrc ~/.vimrc
+    ln -s ~/.env/vim ~/.vim
+    ln -s ~/.env/gitconfig ~/.gitconfig
 
 Switch to the `~/.vim` directory, and fetch submodules:
 
-    cd ~/.vim
+    cd ~/.env
     git submodule init
     git submodule update
