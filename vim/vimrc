@@ -1,5 +1,7 @@
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 
+map <C-n> :NERDTreeToggle<CR>
+
 source ~/.env/vim/bundle/vim-pathogen/autoload/pathogen.vim
 
 execute pathogen#infect()
