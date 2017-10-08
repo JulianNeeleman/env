@@ -8,3 +8,7 @@ execute pathogen#infect()
 
 filetype plugin indent on
 syntax on
+
+" Bazel file syntax highlighting
+autocmd BufNewFile,BufRead *.bzl set syntax=python
+autocmd BufNewFile,BufRead BUILD set syntax=python
