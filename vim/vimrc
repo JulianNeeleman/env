@@ -1,4 +1,5 @@
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
+set number
 
 map <C-n> :NERDTreeToggle<CR>
 
@@ -10,5 +11,5 @@ filetype plugin indent on
 syntax on
 
 " Bazel file syntax highlighting
-autocmd BufNewFile,BufRead *.bzl set syntax=python
-autocmd BufNewFile,BufRead BUILD set syntax=python
+au BufNewFile,BufRead *.bzl set filetype=python
+au BufNewFile,BufRead BUILD set filetype=python
