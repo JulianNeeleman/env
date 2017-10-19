@@ -8,6 +8,7 @@
     ln -s ~/.env/vim ~/.vim
     ln -s ~/.env/gitconfig ~/.gitconfig
     ln -s ~/.env/zshrc ~/.zshrc
+    ln -s ~/.env/oh-my-zsh ~/.oh-my-zsh
 
 3 Fetch submodules
 
