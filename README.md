@@ -9,6 +9,7 @@
     ln -s ~/.env/gitconfig ~/.gitconfig
     ln -s ~/.env/zshrc ~/.zshrc
     ln -s ~/.env/oh-my-zsh ~/.oh-my-zsh
+    ln -s ~/.env/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
 
 3 Fetch submodules
 
