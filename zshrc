@@ -4,14 +4,25 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.env/oh-my-zsh
 
+# Path to Cuda installation.
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64
+
+# Set Clang as default C++ compiler.
+export CC=/usr/bin/clang
+export CXX=/usr/bin/clang++
+
+# Path to Node.js installation.
+PATH="$PATH:$HOME/third_party/node/bin/"
+
 # Cache Bazel completion.
+fpath=(~/.env/zsh-completions/src $fpath)
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="geoffgarside"
+ZSH_THEME="kardan"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -88,3 +99,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /home/julian/third_party/node/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/julian/third_party/node/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /home/julian/third_party/node/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/julian/third_party/node/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh

@@ -3,19 +3,42 @@ set number
 set clipboard=unnamedplus
 
 map <C-n> :NERDTreeToggle<CR>
+nmap <F7> <Plug>(ale_fix)
 
 source ~/.env/vim/bundle/vim-pathogen/autoload/pathogen.vim
 
 execute pathogen#infect()
+Helptags
 
 filetype plugin indent on
 syntax on
 
-" Bazel file syntax highlighting.
-au BufNewFile,BufRead *.bzl set filetype=python
-au BufNewFile,BufRead BUILD set filetype=python
+" Bazel file syntax.
+au BufNewFile,BufRead *.bzl set syntax=python
+au BufNewFile,BufRead BUILD set syntax=python
+
+" YML file syntax.
+au BufRead,BufNewFile *.yml set tabstop=2 shiftwidth=2   
 
 " Linter settings.
 let g:ale_linters = {
-\   'cpp': ['cppcheck', 'cpplint'],
+\   'cpp': [
+\       'clangtidy',
+\   ],
 \}
+
+let g:ale_fixers = {
+\   'cpp': [
+\       'clang-format',
+\   ],
+\   'python': [
+\       'autopep8',
+\   ],
+\   'json': [
+\       'prettier',
+\   ],
+\}
+
+let g:ale_fix_on_save = 1
+let g:ale_cpp_clangtidy_options = '-std=c++11'
+let g:ale_c_clangformat_options = '-style="{BasedOnStyle: llvm, IndentWidth: 4}"'
